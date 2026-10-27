@@ -1,0 +1,3 @@
+Welcome to the document viewer.
+
+This folder holds a couple of public notes. Try viewing notes.txt next.

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Guestbook{% endblock %}
+{% block content %}
+<h2>Guestbook</h2>
+<p><a href="{{ url_for('reset') }}">Reset guestbook</a></p>
+<form method="post">
+  <input type="text" name="author" placeholder="Your name"><br>
+  <textarea name="message" rows="3" placeholder="Leave a message"></textarea><br>
+  <button type="submit">Post</button>
+</form>
+<hr>
+{% for post in posts %}
+<div class="post">
+  <strong>{{ post.author|safe }}</strong>
+  <p>{{ post.message|safe }}</p>
+</div>
+{% endfor %}
+{% endblock %}

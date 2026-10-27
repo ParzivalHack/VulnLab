@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}Vuln Lab{% endblock %}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+  <h1><a href="{{ url_for('index') }}">Vuln Lab</a></h1>
+  <nav>
+    <a href="{{ url_for('search') }}">Search</a>
+    <a href="{{ url_for('posts') }}">Guestbook</a>
+    <a href="{{ url_for('login') }}">Login</a>
+    <a href="{{ url_for('files_view') }}">Files</a>
+    <a href="{{ url_for('diagnostics') }}">Diagnostics</a>
+  </nav>
+</header>
+<main>
+{% block content %}{% endblock %}
+</main>
+<footer>
+  <p>Intentionally vulnerable app built for a security education article. No real data lives here.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,54 @@
+:root {
+  color-scheme: light dark;
+  --bg: #fafafa;
+  --fg: #1a1a1a;
+  --accent: #3b5bdb;
+  --border: #ddd;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15161a;
+    --fg: #e6e6e6;
+    --accent: #7c9bff;
+    --border: #333;
+  }
+}
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem;
+  line-height: 1.5;
+}
+header h1 a { color: var(--fg); text-decoration: none; }
+nav a {
+  margin-right: 1rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+nav a:hover { text-decoration: underline; }
+input, textarea, select, button {
+  font-size: 1rem;
+  padding: 0.4rem;
+  margin: 0.2rem 0;
+}
+.post {
+  border-top: 1px solid var(--border);
+  padding: 0.5rem 0;
+}
+pre {
+  background: rgba(127,127,127,0.1);
+  padding: 0.75rem;
+  overflow-x: auto;
+  border-radius: 4px;
+}
+.error { color: #d6336c; }
+footer {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
+  border-top: 1px solid var(--border);
+  padding-top: 0.5rem;
+}

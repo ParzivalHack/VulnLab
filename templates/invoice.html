@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}Invoice{% endblock %}
+{% block content %}
+<h2>Invoice #{{ invoice_id }}</h2>
+<p>Amount: {{ invoice.amount }}</p>
+<p>Note: {{ invoice.note }}</p>
+{% endblock %}

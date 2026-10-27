@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Search{% endblock %}
+{% block content %}
+<h2>Product search</h2>
+<form method="get">
+  <input type="text" name="q" value="{{ raw_q }}" placeholder="Search products...">
+  <button type="submit">Search</button>
+</form>
+{% if raw_q %}
+<p>Showing results for: {{ raw_q|safe }}</p>
+{% endif %}
+<ul>
+{% for item in results %}
+  <li>{{ item }}</li>
+{% endfor %}
+</ul>
+{% endblock %}

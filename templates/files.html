@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Document viewer{% endblock %}
+{% block content %}
+<h2>Document viewer</h2>
+<form method="get">
+  <input type="text" name="file" value="{{ filename }}" placeholder="e.g. welcome.txt">
+  <button type="submit">View</button>
+</form>
+{% if error %}
+<p class="error">{{ error }}</p>
+{% endif %}
+{% if content %}
+<pre>{{ content }}</pre>
+{% endif %}
+{% endblock %}

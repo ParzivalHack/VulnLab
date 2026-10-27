@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Vuln Lab{% endblock %}
+{% block content %}
+<h2>Welcome to Vuln Lab</h2>
+<p>A small store-and-guestbook style app built to practice finding and exploiting common web vulnerabilities.</p>
+<ul>
+  <li><a href="{{ url_for('search') }}">Product search</a></li>
+  <li><a href="{{ url_for('posts') }}">Guestbook</a></li>
+  <li><a href="{{ url_for('login') }}">Account login</a></li>
+  <li><a href="{{ url_for('files_view') }}">Document viewer</a></li>
+  <li><a href="{{ url_for('diagnostics') }}">Network diagnostics</a></li>
+</ul>
+{% endblock %}

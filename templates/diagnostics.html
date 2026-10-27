@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Diagnostics{% endblock %}
+{% block content %}
+<h2>Network diagnostics</h2>
+<p>Enter a hostname to check if it's reachable from this server.</p>
+<form method="post">
+  <input type="text" name="host" value="{{ host }}" placeholder="example.com">
+  <button type="submit">Ping</button>
+</form>
+{% if output %}
+<pre>{{ output }}</pre>
+{% endif %}
+{% endblock %}
